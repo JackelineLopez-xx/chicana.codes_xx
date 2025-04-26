@@ -1,1 +1,90 @@
+/* 🌸 Base Reset & Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #fff8f4; /* light cream */
+    color: #1a1a1a;            /* soft black */
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s; /* smooth transition */
+  }
+  
+  /* 🩷 Headers */
+  h1, h2, h3 {
+    font-family: 'Caveat', cursive;
+    color: hotpink;
+    text-align: center;
+  }
+  
+  /* ✨ Navbar or links (optional) */
+  a {
+    color: crimson;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 🧁 Fancy Buttons */
+  button {
+    background-color: hotpink;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ff69b4;
+    box-shadow: 0 0 10px hotpink;
+  }
+  
+  /* 🌑 Dark Mode Styles */
+  body.dark-mode {
+    background-color: #1a1a1a; /* dark background */
+    color: #fff;               /* light text */
+  }
+  
+  body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
+    color: hotpink;
+  }
+  
+  body.dark-mode button {
+    background-color: #ff69b4;  /* bright pink button */
+  }
+  
+  body.dark-mode button:hover {
+    background-color: #ff4c99;
+  }
+  
+  /* 🌟 Night Mode Toggle Button Styling */
+  #toggle-mode {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: hotpink;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #toggle-mode:hover {
+    background-color: #ff4c99;
+  }
+  
+  
 
+  
