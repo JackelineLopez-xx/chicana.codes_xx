@@ -1,90 +1,198 @@
 /* 🌸 Base Reset & Fonts */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #fff8f4; /* light cream */
-    color: #1a1a1a;            /* soft black */
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff5e4; /* light cream */
+  color: #1f1f1f;            /* soft black */
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  overflow-x: hidden;
+}
+
+/* 🌹 Header & Navbar */
+header {
+  background: linear-gradient(90deg, #ff69b4, #e63946);
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.title {
+  font-family: 'Caveat', cursive;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px #1f1f1f33;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+nav a {
+  color: #fff5e4;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 3px;
+}
+
+nav a:hover {
+  color: #d4a5ff;
+  border-color: #d4a5ff;
+}
+
+/* ✨ Hero Section */
+.hero {
+  text-align: center;
+  max-width: 800px;
+  margin: 70px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h2 {
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  color: #e63946;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* 🌹 Floating background roses */
+.hero::before, 
+.hero::after {
+  content: "🌹";
+  position: absolute;
+  font-size: 2.5rem;
+  opacity: 0.2;
+  animation: float 6s ease-in-out infinite;
+}
+
+.hero::before {
+  top: 15%;
+  left: 10%;
+}
+
+.hero::after {
+  bottom: 10%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); opacity: 0.2; }
+  50% { transform: translateY(-10px); opacity: 0.4; }
+  100% { transform: translateY(0); opacity: 0.2; }
+}
+
+/* 💻 Footer */
+footer {
+  background-color: #1f1f1f;
+  color: #fff5e4;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  margin-top: 60px;
+  border-top: 4px solid #e63946;
+}
+
+/* 🧁 Buttons */
+button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+button:hover {
+  background-color: #e63946;
+  transform: scale(1.05);
+}
+
+/* 🌑 Dark Mode Styles */
+body.dark-mode {
+  background-color: #1f1f1f;
+  color: #fff5e4;
+}
+
+body.dark-mode header {
+  background: linear-gradient(90deg, #ff69b4, #d4a5ff);
+}
+
+body.dark-mode .hero {
+  background-color: #2a2a2a;
+  color: #fff5e4;
+}
+
+body.dark-mode footer {
+  background-color: #000;
+}
+
+/* 🌟 Mode Toggle Button */
+#toggle-mode {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#toggle-mode:hover {
+  background-color: #e63946;
+}
+
+/* 🌈 Responsive */
+@media (max-width: 600px) {
+  .hero {
+    margin: 40px 15px;
     padding: 20px;
-    transition: background-color 0.3s, color 0.3s; /* smooth transition */
   }
   
-  /* 🩷 Headers */
-  h1, h2, h3 {
-    font-family: 'Caveat', cursive;
-    color: hotpink;
-    text-align: center;
+  .title {
+    font-size: 1.8rem;
   }
-  
-  /* ✨ Navbar or links (optional) */
-  a {
-    color: crimson;
-    text-decoration: none;
-    font-weight: bold;
+
+  nav ul {
+    gap: 0.8rem;
   }
-  
-  a:hover {
-    text-decoration: underline;
+
+  button, #toggle-mode {
+    padding: 8px 16px;
+    font-size: 0.9rem;
   }
-  
-  /* 🧁 Fancy Buttons */
-  button {
-    background-color: hotpink;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #ff69b4;
-    box-shadow: 0 0 10px hotpink;
-  }
-  
-  /* 🌑 Dark Mode Styles */
-  body.dark-mode {
-    background-color: #1a1a1a; /* dark background */
-    color: #fff;               /* light text */
-  }
-  
-  body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
-    color: hotpink;
-  }
-  
-  body.dark-mode button {
-    background-color: #ff69b4;  /* bright pink button */
-  }
-  
-  body.dark-mode button:hover {
-    background-color: #ff4c99;
-  }
-  
-  /* 🌟 Night Mode Toggle Button Styling */
-  #toggle-mode {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: hotpink;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  #toggle-mode:hover {
-    background-color: #ff4c99;
-  }
-  
-  
+}
+
 
   
