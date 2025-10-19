@@ -1,29 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | chicana.codes_xx</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About • chicana.codes_xx</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <nav>
-    <h1>💻 chicana.codes_xx</h1>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="shop.html">Shop</a></li>
-    </ul>
-  </nav>
+  <button id="toggle-mode" aria-label="Toggle dark mode">🌙</button>
+  <button id="menu-btn" class="menu-btn" aria-label="Open menu" aria-expanded="false">
+    <span class="burger"></span>
+  </button>
 
-  <section>
-    <h2>About Me 💕</h2>
-    <p>I’m Jackeline Lopez — a Chicana coder, future machine learning engineer, and digital creator.  
-    My goal? Build a tech community that’s *soft*, *smart*, and *so cutesy!* ✨</p>
-  </section>
+  <div id="overlay-menu" class="overlay" aria-hidden="true">
+    <div class="overlay-inner" role="dialog" aria-modal="true">
+      <button id="close-menu" class="close-menu" aria-label="Close menu">✕</button>
+      <h1 class="site-title overlay-title">🌹 chicana.codes_xx</h1>
+      <nav class="overlay-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <h1 class="site-title">🌹 chicana.codes_xx</h1>
+    <p class="tagline">soft, smart, and cutesy — building community for mujeres in tech</p>
+  </header>
+
+  <main class="container">
+    <section class="about card">
+      <h2>About Me 💕</h2>
+      <p class="lead">Hola, I’m <strong>Jackeline Lopez</strong>. I code, design, and dream with heart. I'm learning machine learning and sharing everything I learn so other chicas can join this space without feeling alone.</p>
+
+      <h3>What I do</h3>
+      <ul class="about-list">
+        <li>Build approachable tutorials for beginners</li>
+        <li>Create aesthetic templates & creator tools</li>
+        <li>Design digital goods that celebrate culture</li>
+      </ul>
+
+      <h3>Values</h3>
+      <p>Community, accessibility, warmth, and playful professionalism. I center mujeres, especially Mexican American creatives, in tech spaces.</p>
+
+      <p class="soft-note">Have a collab idea or want to say hi? <a href="mailto:hello@chicana.codes">Email me</a> — I love hearing from folks.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Jackeline Lopez • Chicana.codes_xx</p>
+  </footer>
 
   <script src="scripts/script.js"></script>
 </body>
 </html>
+
 
