@@ -1,49 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🌹 chicana.codes_xx</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>🌹 chicana.codes_xx • Home</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS File -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#fff5e4" />
 </head>
 <body>
-  <header>
-    <h1 class="title">🌹 chicana.codes_xx • Jackeline Lopez 🌹</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="shop.html">Chicana Creator Tools</a></li>
-        <li><a href="newsletter.html">Newsletter</a></li>
-      </ul>
-    </nav>
+  <!-- Mode toggle + Hamburger -->
+  <button id="toggle-mode" aria-label="Toggle dark mode">🌙</button>
+  <button id="menu-btn" class="menu-btn" aria-label="Open menu" aria-expanded="false">
+    <span class="burger"></span>
+  </button>
+
+  <!-- Fullscreen overlay menu -->
+  <div id="overlay-menu" class="overlay" aria-hidden="true">
+    <div class="overlay-inner" role="dialog" aria-modal="true">
+      <button id="close-menu" class="close-menu" aria-label="Close menu">✕</button>
+      <h1 class="site-title overlay-title">🌹 chicana.codes_xx</h1>
+      <nav class="overlay-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+        </ul>
+      </nav>
+      <div class="overlay-actions">
+        <a href="https://cafecito.app" target="_blank" rel="noopener" class="cta">Buy me a cafecito ☕</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / centered title -->
+  <header class="site-header">
+    <h1 class="site-title">🌹 chicana.codes_xx</h1>
+    <p class="tagline">Jackeline Lopez — Chicana coder • future ML engineer • digital creator</p>
   </header>
 
-  <main>
-    <section class="hero">
-      <h2>Bienvenidas ✨</h2>
-      <p>
-        This is a creative space built by and for Mexican American women (and all women!) who want to explore tech, grow confidence, and create a life that feels authentically ours.
+  <main class="container">
+    <section class="hero card">
+      <h2 class="hero-title">Bienvenidas ✨</h2>
+      <p class="lead">
+        A soft + smart space for Mexican American women (and all mujeres) who want to learn code, build creative projects, and grow together.
       </p>
       <p>
-        From coding tutorials to Notion templates, I'm here to share, uplift, and help you launch your creative dreams — one digital project at a time 💖
+        Tutorials, Notion templates, digital downloads, and cultural-first creator tools — all with corazón.
       </p>
+      <div class="hero-ctas">
+        <a href="projects.html" class="btn">See Projects</a>
+        <a href="shop.html" class="btn outline">Shop & Freebies</a>
+      </div>
     </section>
+
+    <section class="cards-grid">
+      <article class="mini-card">
+        <h3>Projects</h3>
+        <p>Beginner-friendly Python + web projects celebrating cultura & creativity.</p>
+        <a href="projects.html" class="link">View →</a>
+      </article>
+
+      <article class="mini-card">
+        <h3>Shop</h3>
+        <p>Digital downloads, sticker packs, merch — all made with care.</p>
+        <a href="shop.html" class="link">Browse →</a>
+      </article>
+
+      <article class="mini-card">
+        <h3>Newsletter</h3>
+        <p>Monthly notes, mini-tutorials, and community updates. Soft & empowering.</p>
+        <a href="newsletter.html" class="link">Join →</a>
+      </article>
+    </section>
+
   </main>
 
-  <footer>
-    <p>&copy; 2025 Jackeline Lopez • Building bridges for mujeres in tech, one line of code at a time 💻💖</p>
+  <footer class="site-footer">
+    <p>&copy; 2025 Jackeline Lopez • Building bridges for mujeres in tech, one line at a time.</p>
   </footer>
 
-  <!-- Optional JS for dark/light mode toggle later -->
   <script src="scripts/script.js"></script>
 </body>
 </html>
+
 
 
