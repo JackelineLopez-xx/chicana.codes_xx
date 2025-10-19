@@ -1,112 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chicana Creator Tools - Shop</title>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shop • chicana.codes_xx</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="newsletter.html">Newsletter</a></li>
-    </ul>
-  </nav>
+  <button id="toggle-mode" aria-label="Toggle dark mode">🌙</button>
+  <button id="menu-btn" class="menu-btn" aria-label="Open menu" aria-expanded="false">
+    <span class="burger"></span>
+  </button>
 
-  <header>
-    <h1>Chicana Creator Tools</h1>
-    <p>Curated tools & merch to empower you on your tech journey, made by a proud Mexican American woman in STEM. 🌹</p>
+  <div id="overlay-menu" class="overlay" aria-hidden="true">
+    <div class="overlay-inner" role="dialog" aria-modal="true">
+      <button id="close-menu" class="close-menu" aria-label="Close menu">✕</button>
+      <h1 class="site-title overlay-title">🌹 chicana.codes_xx</h1>
+      <nav class="overlay-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="shop.html" class="active">Shop</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <h1 class="site-title">Chicana Creator Tools</h1>
+    <p class="tagline">Digital downloads, merch mockups, and starter kits made with cariño.</p>
   </header>
 
-  <!-- 🧠 Digital Downloads -->
-  <section class="product">
-    <h2>Digital Downloads</h2>
-    <div class="product-item">
-      <img src="assets/digital-journal.jpg" alt="Digital Journal">
-      <div class="product-info">
-        <h3>Self-Love Journal PDF</h3>
-        <p>Reflect, grow, and reclaim your magic with this printable journal. 💖📝</p>
-        <button>Download</button>
-      </div>
-    </div>
-  </section>
+  <main class="container">
+    <section class="shop card">
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-thumb" aria-hidden="true">📝</div>
+          <h3>Self-Love Journal (PDF)</h3>
+          <p>Printable pages for reflection & tiny rituals.</p>
+          <button class="btn">Download</button>
+        </div>
 
-  <!-- ✨ Sticker Packs -->
-  <section class="product-section">
-    <h2 class="section-title">✨ Chicana Sticker Packs</h2>
-    <div class="sticker-carousel">
-      <button class="arrow left">&#8249;</button>
-      <div class="sticker-track">
-        <img src="assets/sticker-preview1.jpg" alt="Sticker 1">
-        <img src="assets/sticker-preview2.jpg" alt="Sticker 2">
-        <img src="assets/sticker-preview3.jpg" alt="Sticker 3">
-        <img src="assets/sticker-preview4.jpg" alt="Sticker 4">
-        <img src="assets/sticker-preview5.jpg" alt="Sticker 5">
-      </div>
-      <button class="arrow right">&#8250;</button>
-    </div>
-  </section>
+        <div class="product-card">
+          <div class="product-thumb" aria-hidden="true">💻</div>
+          <h3>Portfolio Starter Pack</h3>
+          <p>Notion + site template + color palette.</p>
+          <button class="btn">Buy now</button>
+        </div>
 
-  <!-- 👕 Merch -->
-  <section class="product">
-    <h2>Merch</h2>
-    <div class="product-item">
-      <img src="assets/chicana-hoodie.jpg" alt="Chicana Hoodie">
-      <div class="product-info">
-        <h3>Chicana Power Hoodie</h3>
-        <p>Cozy up in culture and confidence with this soft, powerful hoodie. 💪🏽🖤</p>
-        <button>Buy Now</button>
+        <div class="product-card">
+          <div class="product-thumb" aria-hidden="true">🎨</div>
+          <h3>Sticker Pack</h3>
+          <p>Cute Chicana stickers for laptop & notebooks.</p>
+          <button class="btn">Buy now</button>
+        </div>
       </div>
-    </div>
+    </section>
+  </main>
 
-    <div class="product-item">
-      <img src="assets/chicana-tote.jpg" alt="Chicana Tote">
-      <div class="product-info">
-        <h3>Reina de Código Tote</h3>
-        <p>Carry your dreams in a bag that reps your crown and your code. 👑🧠</p>
-        <button>Buy Now</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- 💌 Freebies -->
-  <section class="product">
-    <h2>Freebies</h2>
-    <div class="product-item">
-      <img src="assets/freebie-wallpaper.jpg" alt="Wallpaper Freebie">
-      <div class="product-info">
-        <h3>Bloom & Code Wallpaper</h3>
-        <p>Pretty up your phone or laptop with this soft & empowering wallpaper! 🌼📱</p>
-        <button>Download Free</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- 🧰 Creator Starter Kit -->
-  <section class="product">
-    <h2>Creator Starter Kits</h2>
-    <div class="product-item">
-      <img src="assets/starter-kit.jpg" alt="Creator Starter Kit">
-      <div class="product-info">
-        <h3>Content Creator Kickstart Pack</h3>
-        <p>A Notion planner + affirmations + digital tools — all in one cute kit! 💻📔✨</p>
-        <button>Buy Now</button>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Jackeline Lopez • Chicana.codes_xx 🌸 Coded with corazón</p>
+  <footer class="site-footer">
+    <p>&copy; 2025 Jackeline Lopez • Shop</p>
   </footer>
 
-
-  <!-- Link to JavaScript -->
   <script src="scripts/script.js"></script>
 </body>
 </html>
+
 
