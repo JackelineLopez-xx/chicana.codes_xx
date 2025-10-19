@@ -1,36 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Newsletter • chicana.codes_xx</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1 class="title">🌹 Newsletter • chicana.codes_xx 🌹</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="shop.html">Chicana Creator Tools</a></li>
-        <li><a href="newsletter.html">Newsletter</a></li>
-      </ul>
-    </nav>
+  <button id="toggle-mode" aria-label="Toggle dark mode">🌙</button>
+  <button id="menu-btn" class="menu-btn" aria-label="Open menu" aria-expanded="false">
+    <span class="burger"></span>
+  </button>
+
+  <div id="overlay-menu" class="overlay" aria-hidden="true">
+    <div class="overlay-inner" role="dialog" aria-modal="true">
+      <button id="close-menu" class="close-menu" aria-label="Close menu">✕</button>
+      <h1 class="site-title overlay-title">🌹 chicana.codes_xx</h1>
+      <nav class="overlay-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="newsletter.html" class="active">Newsletter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <h1 class="site-title">Newsletter</h1>
+    <p class="tagline">Mini-tutorials, monthly thoughts, and community updates — soft + useful.</p>
   </header>
 
-  <main>
-    <section class="hero">
-      <h2>You should totally sign up for free to get updates, tools, & encouragement! 💌</h2>
-      <p>Sign up for my monthly letter — curated inspiration, coding tips, and Latina-led digital love right to your inbox.</p>
-      <p>Stay tuned for more updates and exciting projects! 👀🌟</p>
+  <main class="container">
+    <section class="newsletter card">
+      <h2>Join the lista ✉️</h2>
+      <p>Sign up for monthly notes — small projects, resources, and cultural love.</p>
+
+      <form class="newsletter-form" action="#" method="post" onsubmit="alert('Thanks! Paste real form action when ready.'); return false;">
+        <label for="name" class="sr-only">Name</label>
+        <input id="name" name="name" placeholder="Your name" required />
+
+        <label for="email" class="sr-only">Email</label>
+        <input id="email" type="email" name="email" placeholder="you@correo.com" required />
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Subscribe</button>
+        </div>
+      </form>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Jackeline Lopez • Comunidad is everything 🌟 Thank you 🎀</p>
+  <footer class="site-footer">
+    <p>&copy; 2025 Jackeline Lopez • Newsletter</p>
   </footer>
+
+  <script src="scripts/script.js"></script>
 </body>
 </html>
+
 
