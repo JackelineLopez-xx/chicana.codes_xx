@@ -3,20 +3,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleButton = document.getElementById("toggle-mode");
   const body = document.body;
 
-  // Check if user has dark mode saved from before
+  if (!toggleButton) return; // safety
+
+  // Load saved preference
   if (localStorage.getItem("theme") === "dark") {
     body.classList.add("dark-mode");
+    toggleButton.textContent = "☀️ Light Mode";
+  } else {
+    toggleButton.textContent = "🌙 Dark Mode";
   }
 
   toggleButton.addEventListener("click", () => {
     body.classList.toggle("dark-mode");
 
-    // Save user preference
     if (body.classList.contains("dark-mode")) {
       localStorage.setItem("theme", "dark");
+      toggleButton.textContent = "☀️ Light Mode";
     } else {
       localStorage.setItem("theme", "light");
+      toggleButton.textContent = "🌙 Dark Mode";
     }
   });
 });
+
 
