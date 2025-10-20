@@ -27,4 +27,4 @@ Open `index.html` in a browser or deploy to GitHub Pages / Netlify / Vercel.
 - Soft purple: `#d4a5ff`
 
 ## Contact
-Made with cariño by **Jackeline Lopez** — hello@chicana.codes
+Made with cariño by **Jackeline Lopez** — techyjackie88@gmail.com
