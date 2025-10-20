@@ -3,92 +3,119 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>🌹 chicana.codes_xx • Home</title>
+  <title>🌹 chicana.codes_xx — Home</title>
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css" />
-  <meta name="theme-color" content="#fff5e4" />
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#fff5e4">
 </head>
 <body>
-  <!-- Mode toggle + Hamburger -->
-  <button id="toggle-mode" aria-label="Toggle dark mode">🌙</button>
-  <button id="menu-btn" class="menu-btn" aria-label="Open menu" aria-expanded="false">
-    <span class="burger"></span>
-  </button>
+  <!-- SIDEBAR -->
+  <aside id="sidebar" aria-label="Main sidebar">
+    <button id="collapse-sidebar" class="collapse-toggle" title="Collapse sidebar">⟨ ⟩</button>
 
-  <!-- Fullscreen overlay menu -->
-  <div id="overlay-menu" class="overlay" aria-hidden="true">
-    <div class="overlay-inner" role="dialog" aria-modal="true">
-      <button id="close-menu" class="close-menu" aria-label="Close menu">✕</button>
-      <h1 class="site-title overlay-title">🌹 chicana.codes_xx</h1>
-      <nav class="overlay-nav">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="newsletter.html">Newsletter</a></li>
-        </ul>
-      </nav>
-      <div class="overlay-actions">
-        <a href="https://cafecito.app" target="_blank" rel="noopener" class="cta">Buy me a cafecito ☕</a>
+    <div class="profile">
+      <img id="profile-img" src="assets/profile-placeholder.jpg" alt="Profile">
+      <div class="meta">
+        <div id="profile-name" class="name">Sign in</div>
+        <div id="profile-email" class="email"></div>
+        <div class="auth-actions">
+          <button id="open-signin" class="small-btn">Sign in</button>
+          <button id="signout-btn" class="small-btn ghost" style="display:none;">Sign out</button>
+        </div>
       </div>
+    </div>
+
+    <nav class="sidebar-nav" role="navigation" aria-label="Primary">
+      <a href="index.html">🏠 Home</a>
+      <a href="about.html">✨ About</a>
+      <a href="projects.html">💻 Projects</a>
+      <a href="shop.html">🛍️ Shop</a>
+      <a href="newsletter.html">✉️ Newsletter</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div style="margin-top:12px;">
+        <strong>Palette</strong>
+        <div style="display:flex; gap:6px; margin-top:8px;">
+          <span style="width:20px;height:20px;background:#ff69b4;border-radius:6px;display:inline-block"></span>
+          <span style="width:20px;height:20px;background:#e63946;border-radius:6px;display:inline-block"></span>
+          <span style="width:20px;height:20px;background:#d4a5ff;border-radius:6px;display:inline-block"></span>
+        </div>
+      </div>
+      <p class="footer-small" style="margin-top:14px;">&copy; 2025 Jackeline Lopez</p>
+    </div>
+  </aside>
+
+  <!-- SIGNIN MODAL -->
+  <div id="signin-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="signin-title">
+      <button id="close-signin" style="float:right;border:none;background:transparent;font-size:20px;cursor:pointer;">✕</button>
+      <h3 id="signin-title">Create a local profile</h3>
+      <p style="color:var(--muted);margin-bottom:12px;">This saves a profile in your browser only. For real accounts, we can connect auth later.</p>
+      <form id="signin-form">
+        <input class="input" name="name" placeholder="Your name (displayed)" required />
+        <input class="input" name="email" placeholder="Email (optional)" />
+        <input class="input" name="avatar" placeholder="Avatar image URL (optional)" />
+        <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:8px;">
+          <button type="button" id="close-signin-2" class="small-btn ghost" onclick="document.getElementById('signin-modal').classList.remove('open');document.documentElement.style.overflow='';">Cancel</button>
+          <button type="submit" class="small-btn">Save profile</button>
+        </div>
+      </form>
     </div>
   </div>
 
-  <!-- Header / centered title -->
-  <header class="site-header">
-    <h1 class="site-title">🌹 chicana.codes_xx</h1>
-    <p class="tagline">Jackeline Lopez — Chicana coder • future ML engineer • digital creator</p>
-  </header>
-
-  <main class="container">
-    <section class="hero card">
-      <h2 class="hero-title">Bienvenidas ✨</h2>
-      <p class="lead">
-        A soft + smart space for Mexican American women (and all mujeres) who want to learn code, build creative projects, and grow together.
-      </p>
-      <p>
-        Tutorials, Notion templates, digital downloads, and cultural-first creator tools — all with corazón.
-      </p>
-      <div class="hero-ctas">
-        <a href="projects.html" class="btn">See Projects</a>
-        <a href="shop.html" class="btn outline">Shop & Freebies</a>
+  <!-- MAIN -->
+  <div class="main-wrap">
+    <header class="header">
+      <div>
+        <div class="title">🌹 chicana.codes_xx</div>
+        <div class="sub">Jackeline Lopez — Chicana coder • future ML engineer</div>
       </div>
-    </section>
+      <div style="display:flex;gap:12px;align-items:center;">
+        <a id="back-link" class="back-link" href="index.html" style="display:none;">← Home</a>
+        <button id="toggle-mode" aria-label="Toggle theme">🌙</button>
+      </div>
+    </header>
 
-    <section class="cards-grid">
-      <article class="mini-card">
-        <h3>Projects</h3>
-        <p>Beginner-friendly Python + web projects celebrating cultura & creativity.</p>
-        <a href="projects.html" class="link">View →</a>
-      </article>
+    <main>
+      <section class="card">
+        <h2 style="color:var(--deep);font-family:'Caveat',cursive;font-size:1.8rem;">Bienvenidas ✨</h2>
+        <p style="margin-top:8px;color:var(--muted);">A soft + smart space for Mexican American women (and all mujeres) exploring tech, design, and creative business.</p>
+        <div style="margin-top:14px;display:flex;gap:10px;">
+          <a class="btn" href="projects.html">See Projects</a>
+          <a class="btn outline" href="shop.html">Shop & Freebies</a>
+        </div>
+      </section>
 
-      <article class="mini-card">
-        <h3>Shop</h3>
-        <p>Digital downloads, sticker packs, merch — all made with care.</p>
-        <a href="shop.html" class="link">Browse →</a>
-      </article>
+      <section class="card grid-3">
+        <div>
+          <h3 style="color:var(--rose);margin-bottom:6px;">Projects</h3>
+          <p style="color:var(--muted);">Beginner-friendly tutorials, templates, and small web tools.</p>
+          <p style="margin-top:8px;"><a class="link" href="projects.html">View →</a></p>
+        </div>
 
-      <article class="mini-card">
-        <h3>Newsletter</h3>
-        <p>Monthly notes, mini-tutorials, and community updates. Soft & empowering.</p>
-        <a href="newsletter.html" class="link">Join →</a>
-      </article>
-    </section>
+        <div>
+          <h3 style="color:var(--rose);margin-bottom:6px;">Shop</h3>
+          <p style="color:var(--muted);">Digital goods, sticker packs, and aesthetic starter kits.</p>
+          <p style="margin-top:8px;"><a class="link" href="shop.html">Browse →</a></p>
+        </div>
 
-  </main>
+        <div>
+          <h3 style="color:var(--rose);margin-bottom:6px;">Newsletter</h3>
+          <p style="color:var(--muted);">Mini-tutorials, community notes, and soft resources.</p>
+          <p style="margin-top:8px;"><a class="link" href="newsletter.html">Join →</a></p>
+        </div>
+      </section>
+    </main>
 
-  <footer class="site-footer">
-    <p>&copy; 2025 Jackeline Lopez • Building bridges for mujeres in tech, one line at a time.</p>
-  </footer>
+    <footer style="margin-top:14px;color:var(--muted);">© 2025 Jackeline Lopez • chicana.codes_xx</footer>
+  </div>
 
-  <script src="scripts/script.js"></script>
+<script src="scripts/script.js"></script>
 </body>
 </html>
+
  
 
 
